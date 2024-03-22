@@ -3,7 +3,7 @@ public class Exercicio11 {
         int totalHomens = 0;
         int totalMulheres = 0;
 
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 56; i++) {
             String nome = Prompt.lerLinha("Digite o nome da pessoa " + (i + 1) + ": ");
             String sexo = Prompt.lerLinha("Digite o sexo da pessoa (M/F): ");
 
