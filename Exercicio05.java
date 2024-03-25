@@ -1,7 +1,9 @@
 public class Exercicio05 {
-    public static void executar(){
-        double cot = Prompt.lerDecimal("Informe o valor da compra: ");
+    public static void executar() {
+        double valorCompra = Prompt.lerDecimal("Digite o valor da compra: ");
 
-        Prompt.imprimir("O valor valor da prestação fica: " + (cot / 5));
+        double valorPrestacao = MamaoComAcucar.calcularValorPrestacoes(valorCompra);
+
+        Prompt.imprimir("Valor das prestações: R$ " + valorPrestacao);
     }
 }
