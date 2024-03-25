@@ -1,10 +1,16 @@
 public class Exercicio04 {
-    public static void executar(){
-        double cot = Prompt.lerDecimal("Informe a cotação atual do dolar: ");
-        double dol = Prompt.lerDecimal("Informe quantos dolares possui: ");
- 
-        double conv = dol * cot;
- 
-        Prompt.imprimir("O valor de " + dol + " em Reais ficam R$" + conv);
-     }
+    public static void executar() {
+        Prompt.imprimir("Digite a cotação do dólar: ");
+        double cotacaoDolar = Prompt.lerDecimal();
+
+        Cambio cambio = new Cambio(cotacaoDolar);
+
+        Prompt.imprimir("Digite a quantidade de dólares disponíveis: ");
+        double valorEmDolar = Prompt.lerDecimal();
+
+        double valorEmReal = cambio.converterParaReal(valorEmDolar);
+
+        Prompt.imprimir("Valor em real: R$ " + valorEmReal);
+
+    }
 }
