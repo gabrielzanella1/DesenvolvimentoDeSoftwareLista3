@@ -1,18 +1,21 @@
 public class Exercicio01 {
-    public static void executar(){
+    public static void executar() {
 
-        String nome = Prompt.lerLinha("Informe nome do Aluno: ");
+        Prompt.imprimir("Digite o nome do aluno: ");
+        String nome = Prompt.lerLinha();
 
-        int[] notas = new int[3];
-        double soma = 0;
+        Prompt.imprimir("Digite a nota da primeira prova: ");
+        double nota1 = Prompt.lerDecimal();
 
-        for(int i = 0; i < notas.length; i++){
-            notas[i] = Prompt.lerInteiro("Informe a nota " + i + ": ");
-            soma += notas[i];
-        }
+        Prompt.imprimir("Digite a nota da segunda prova: ");
+        double nota2 = Prompt.lerDecimal();
 
-       double media = soma/notas.length;
+        Prompt.imprimir("Digite a nota da terceira prova: ");
+        double nota3 = Prompt.lerDecimal();
 
-       Prompt.imprimir("O nome do aluno é: " + nome + " e sua média é: " + media);
+        Aluno aluno = new Aluno(nome, nota1, nota2, nota3);
+
+        Prompt.imprimir("Nome do aluno: " + aluno.getNome());
+        Prompt.imprimir("Média: " + aluno.calcularMedia());
     }
 }
