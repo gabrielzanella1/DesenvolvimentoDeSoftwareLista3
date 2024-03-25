@@ -1,11 +1,20 @@
+import java.util.Scanner;
+
 public class Exercicio03 {
-    public static void executar(){
-        String nome = Prompt.lerLinha("Informe o nome do vendedor: ");
-        double salario = Prompt.lerDecimal("Informe o salário Fixo do vendedor " + nome + ":");
-        double vendas = Prompt.lerDecimal("Informe o total de vendas mensal: ");
+    public static void executar() {
+        Prompt.imprimir("Digite o nome do vendedor: ");
+        String nome = Prompt.lerLinha();
 
-        double comissao = vendas * 0.15;
+        Prompt.imprimir("Digite o salário fixo do vendedor: ");
+        double salarioFixo = Prompt.lerDecimal();
 
-        Prompt.imprimir("O vendedor " + nome + " tem um salário fixo de: " + salario + " e seu salário total será: " + (comissao + salario));
+        Prompt.imprimir("Digite o total de vendas do vendedor: ");
+        double totalVendas = Prompt.lerDecimal();
+
+        Vendedor vendedor = new Vendedor(nome, salarioFixo, totalVendas);
+
+        Prompt.imprimir("Nome do vendedor: " + vendedor.getNome());
+        Prompt.imprimir("Salário fixo: R$ " + vendedor.getSalarioFixo());
+        Prompt.imprimir("Salário final: R$ " + vendedor.calcularSalarioFinal());
     }
 }
