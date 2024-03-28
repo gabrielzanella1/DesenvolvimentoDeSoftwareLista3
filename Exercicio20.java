@@ -1,26 +1,11 @@
 public class Exercicio20 {
     public static void executar(){
-        String nome = Prompt.lerLinha("Digite o nome do professor: ");
-        int nivel = Prompt.lerInteiro("Digite o nível do professor (1, 2 ou 3): ");
-        int horasAula = Prompt.lerInteiro("Digite a quantidade de horas/aula dadas: ");
+        int nivel = Prompt.lerInteiro("Informe o nível do professor (1, 2 ou 3): ");
+        int horasAula = Prompt.lerInteiro("Informe a quantidade de horas/aula dadas pelo professor: ");
 
-        double valorHoraAula;
+        Professor professor = new Professor(nivel);
+        double salario = professor.calcularSalario(horasAula);
 
-        if (nivel == 1) {
-            valorHoraAula = 12.00;
-        } else if (nivel == 2) {
-            valorHoraAula = 17.00;
-        } else if (nivel == 3) {
-            valorHoraAula = 25.00;
-        } else {
-            valorHoraAula = 0.00;
-            System.out.println("Nível inválido. Valor da hora/aula será zero.");
-        }
-
-        double salario = horasAula * valorHoraAula;
-
-        Prompt.linhaEmBranco();
-        Prompt.imprimir("Nome do professor: " + nome);
-        Prompt.imprimir("Salário: R$ " + salario);
+        Prompt.imprimir("O salário do professor é R$ " + salario);
     }
 }
