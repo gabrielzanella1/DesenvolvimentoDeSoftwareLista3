@@ -1,23 +1,16 @@
 public class Exercicio08 {
     public static void executar(){
-        String nome = Prompt.lerLinha("Digite o nome do aluno: ");
-        double nota1 = Prompt.lerDecimal("Digite a primeira nota: ");
-        double nota2 = Prompt.lerDecimal("Digite a segunda nota: ");
-        double nota3 = Prompt.lerDecimal("Digite a terceira nota: ");
+        String nome = Prompt.lerLinha("Informe o nome do aluno: ");
+        double nota1 = Prompt.lerDecimal("Informe a primeira nota: ");
+        double nota2 = Prompt.lerDecimal("Informe a segunda nota: ");
+        double nota3 = Prompt.lerDecimal("Informe a terceira nota: ");
 
-        double media = (nota1 + nota2 + nota3) / 3;
-
-        String resultado;
-        if (media >= 7) {
-            resultado = "Aprovado";
-        } else if (media <= 5) {
-            resultado = "Reprovado";
-        } else {
-            resultado = "Recuperação";
-        }
+        Aluno2 aluno = new Aluno2(nome, nota1, nota2, nota3);
+        double media = aluno.calcularMedia();
+        String mencao = aluno.calcularMencao();
 
         Prompt.imprimir("Nome do aluno: " + nome);
         Prompt.imprimir("Média: " + media);
-        Prompt.imprimir("Resultado: " + resultado);
+        Prompt.imprimir("Resultado: " + mencao);
     }
-}   
+}  
