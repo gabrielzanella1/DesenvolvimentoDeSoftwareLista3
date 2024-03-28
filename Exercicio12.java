@@ -3,34 +3,28 @@ public class Exercicio12 {
         int totalCarrosAte2000 = 0;
         int totalGeral = 0;
 
-        char continuar;
-        do {
-            int ano = Prompt.lerInteiro("Digite o ano do veículo: ");
-            double valor = Prompt.lerDecimal("Digite o valor do veículo: ");
+        char continuar = 'S';
+        while (continuar == 'S' || continuar == 's') {
+            int ano = Prompt.lerInteiro("Informe o ano do veículo: ");
+            CarangoVelho carango = new CarangoVelho(ano);
 
-            double desconto;
+            double desconto = carango.calcularDesconto();
+            double valorOriginal = Prompt.lerDecimal("Informe o valor original do veículo: ");
+            double valorDesconto = valorOriginal * desconto;
+            double valorFinal = valorOriginal - valorDesconto;
+
+            Prompt.imprimir("Desconto: R$ " + valorDesconto);
+            Prompt.imprimir("Valor a ser pago pelo cliente: R$ " + valorFinal);
+
             if (ano <= 2000) {
-                desconto = valor * 0.12;
                 totalCarrosAte2000++;
-            } else {
-                desconto = valor * 0.07;
             }
-
-            double valorComDesconto = valor - desconto;
-
-            Prompt.linhaEmBranco();
-            Prompt.imprimir("Valor do veículo: R$ " + valor);
-            Prompt.imprimir("Valor do desconto: R$ " + desconto);
-            Prompt.imprimir("Valor a ser pago pelo cliente: R$ " + valorComDesconto);
-            Prompt.linhaEmBranco();
-
             totalGeral++;
 
-            continuar = Prompt.lerLinha("Deseja continuar calculando desconto? (S/N)").toUpperCase().charAt(0);
-        } while (continuar == 'S');
+            continuar = Prompt.lerLinha("Deseja continuar calculando desconto? (S/N)").charAt(0);
+        }
 
-        Prompt.linhaEmBranco();
-        Prompt.imprimir("Total de carros com ano até 2000: " + totalCarrosAte2000);
+        Prompt.imprimir("Total de carros até 2000: " + totalCarrosAte2000);
         Prompt.imprimir("Total geral de carros: " + totalGeral);
     }
 }
