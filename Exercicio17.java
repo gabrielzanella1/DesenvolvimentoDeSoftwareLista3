@@ -1,15 +1,27 @@
 public class Exercicio17 {
     public static void executar(){
-        String nome = Prompt.lerLinha("Digite o nome do funcionário: ");
-        double salarioAtual = Prompt.lerDecimal("Digite o salário do funcionário: ");
+        double totalAumentoFolha = 0;
 
-        double novoSalario = salarioAtual * 1.10; 
-        double reajuste = novoSalario - salarioAtual;
+        while (true) {
+            String nome = Prompt.lerLinha("Informe o nome do funcionário (ou 'FIM' para encerrar): ");
+            if (nome.equalsIgnoreCase("FIM")) {
+                break;
+            }
 
-        Prompt.linhaEmBranco();
-        Prompt.imprimir("Nome do funcionário: " + nome);
-        Prompt.imprimir("Reajuste concedido: R$ " + reajuste);
-        Prompt.imprimir("Novo salário: R$ " + novoSalario);
+            double salarioAtual = Prompt.lerDecimal("Informe o salário atual de " + nome + ": ");
+            double salarioMinimo = Prompt.lerDecimal("Informe o valor do salário mínimo: ");
+
+            Salario salario = new Salario(nome, salarioAtual, salarioMinimo);
+            double novoSalario = salario.calcularReajuste();
+            double aumentoFolha = salario.calcularAumentoFolhaPagamento();
+
+            Prompt.imprimir("Novo salário de " + nome + ": R$ " + novoSalario);
+            Prompt.imprimir("Aumento na folha de pagamento: R$ " + aumentoFolha);
+
+            totalAumentoFolha += aumentoFolha;
+        }
+
+        Prompt.imprimir("Total de aumento na folha de pagamento: R$ " + totalAumentoFolha);
     }
 }
 
