@@ -4,22 +4,19 @@ public class Exercicio11 {
         int totalMulheres = 0;
 
         for (int i = 0; i < 56; i++) {
-            String nome = Prompt.lerLinha("Digite o nome da pessoa " + (i + 1) + ": ");
-            String sexo = Prompt.lerLinha("Digite o sexo da pessoa (M/F): ");
+            String nome = Prompt.lerLinha("Informe o nome da pessoa " + (i + 1) + ": ");
+            char sexo = Prompt.lerLinha("Informe o sexo (M/F) da pessoa " + (i + 1) + ": ").charAt(0);
 
-            if (sexo.equalsIgnoreCase("M")) {
-                Prompt.imprimir(nome + " é homem.");
+            String mensagem = Sexo.verificarSexo(sexo);
+            Prompt.imprimir("Pessoa " + (i + 1) + ": " + nome + " - " + mensagem);
+
+            if (mensagem.equals("Homem")) {
                 totalHomens++;
-            } else if (sexo.equalsIgnoreCase("F")) {
-                Prompt.imprimir(nome + " é mulher.");
+            } else if (mensagem.equals("Mulher")) {
                 totalMulheres++;
-            } else {
-                Prompt.imprimir("Sexo inválido. Digite M ou F.");
-                i--; 
             }
         }
 
-        Prompt.linhaEmBranco();
         Prompt.imprimir("Total de homens: " + totalHomens);
         Prompt.imprimir("Total de mulheres: " + totalMulheres);
     }
