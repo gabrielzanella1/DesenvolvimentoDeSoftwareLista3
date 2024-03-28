@@ -1,32 +1,26 @@
 public class Exercicio16 {
     public static void executar(){
-        double salarioMinimo = 1300.00; 
-        int totalFuncionarios = 584;
         double totalReajuste = 0;
+        double totalNovosSalarios = 0;
+        int totalFuncionarios = 584;
+
+        double salarioMinimo = Prompt.lerDecimal("Informe o valor do salário mínimo: ");
 
         for (int i = 0; i < totalFuncionarios; i++) {
-            double salarioAtual = Prompt.lerDecimal("Digite o salário do funcionário " + (i + 1) + ": ");
-            double novoSalario;
+            double salario = Prompt.lerDecimal("Informe o salário do funcionário " + (i + 1) + ": ");
 
-            if (salarioAtual < 3 * salarioMinimo) {
-                novoSalario = salarioAtual * 1.5; 
-            } else if (salarioAtual >= 3 * salarioMinimo && salarioAtual <= 10 * salarioMinimo) {
-                novoSalario = salarioAtual * 1.2; 
-            } else if (salarioAtual > 10 * salarioMinimo && salarioAtual <= 20 * salarioMinimo) {
-                novoSalario = salarioAtual * 1.15; 
-            } else {
-                novoSalario = salarioAtual * 1.1; 
-            }
+            Reajuste reajuste = new Reajuste(salario, salarioMinimo);
+            double reajusteCalculado = reajuste.calcularReajuste();
+            double novoSalario = reajuste.calcularNovoSalario();
 
-            double reajuste = novoSalario - salarioAtual;
-            totalReajuste += reajuste;
+            Prompt.imprimir("Reajuste do funcionário " + (i + 1) + ": R$ " + reajusteCalculado);
+            Prompt.imprimir("Novo salário do funcionário " + (i + 1) + ": R$ " + novoSalario);
 
-            Prompt.imprimir("Salário atual do funcionário: R$ " + salarioAtual);
-            Prompt.imprimir("Novo salário do funcionário: R$ " + novoSalario);
-            Prompt.imprimir("Reajuste concedido: R$ " + reajuste);
-            Prompt.linhaEmBranco();
+            totalReajuste += reajusteCalculado;
+            totalNovosSalarios += novoSalario;
         }
 
-        Prompt.imprimir("Total de reajuste concedido: R$ " + totalReajuste);
+        Prompt.imprimir("Total de reajuste dado: R$ " + totalReajuste);
+        Prompt.imprimir("Total de salários após reajuste: R$ " + totalNovosSalarios);
     }
 }   
