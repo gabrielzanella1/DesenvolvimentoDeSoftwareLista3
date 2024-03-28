@@ -4,36 +4,28 @@ public class Exercicio15 {
         double totalPago = 0;
 
         while (true) {
-            String combustivel = Prompt.lerLinha("Digite o tipo de combustível (álcool, gasolina, diesel): ");
-            if (combustivel.equalsIgnoreCase("zero")) {
-                break;
-            }
+            String combustivel = Prompt.lerLinha("Informe o tipo de combustível (Álcool, Gasolina, Diesel): ");
+            if (combustivel.equalsIgnoreCase("Álcool") || combustivel.equalsIgnoreCase("Gasolina") || combustivel.equalsIgnoreCase("Diesel")) {
+                double valorVeiculo = Prompt.lerDecimal("Informe o valor do veículo (0 para encerrar): ");
+                if (valorVeiculo == 0) {
+                    break;
+                }
 
-            double valorVeiculo = Prompt.lerDecimal("Digite o valor do veículo: ");
+                Carango carango = new Carango(combustivel, valorVeiculo);
+                double desconto = carango.calcularDesconto();
+                double valorFinal = carango.calcularValorFinal();
 
-            double desconto = 0;
-            if (combustivel.equalsIgnoreCase("álcool")) {
-                desconto = valorVeiculo * 0.25;
-            } else if (combustivel.equalsIgnoreCase("gasolina")) {
-                desconto = valorVeiculo * 0.21;
-            } else if (combustivel.equalsIgnoreCase("diesel")) {
-                desconto = valorVeiculo * 0.14;
+                Prompt.imprimir("Desconto: R$ " + desconto);
+                Prompt.imprimir("Valor a ser pago pelo cliente: R$ " + valorFinal);
+
+                totalDesconto += desconto;
+                totalPago += valorFinal;
             } else {
-                System.out.println("Tipo de combustível inválido. Desconto será zero.");
+                Prompt.imprimir("Tipo de combustível inválido. Informe novamente.");
             }
-
-            double valorPago = valorVeiculo - desconto;
-
-            totalDesconto += desconto;
-            totalPago += valorPago;
-
-            Prompt.imprimir("Valor do veículo: R$ " + valorVeiculo);
-            Prompt.imprimir("Valor do desconto: R$ " + desconto);
-            Prompt.imprimir("Valor a ser pago pelo cliente: R$ " + valorPago);
-            Prompt.linhaEmBranco();
         }
 
-        Prompt.imprimir("Total de desconto: R$ " + totalDesconto);
+        Prompt.imprimir("Total de desconto dado: R$ " + totalDesconto);
         Prompt.imprimir("Total pago pelos clientes: R$ " + totalPago);
     }
 }
