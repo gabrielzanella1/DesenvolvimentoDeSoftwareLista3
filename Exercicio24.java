@@ -1,12 +1,12 @@
 public class Exercicio24 {
     public static void executar(){ 
-        double notaLaboratorio = Prompt.lerDecimal("Digite a nota do trabalho de laboratório: ");
-        double notaSemestral = Prompt.lerDecimal("Digite a nota da avaliação semestral: ");
-        double notaExameFinal = Prompt.lerDecimal("Digite a nota do exame final: ");
+        double notaLaboratorio = Prompt.lerDecimal("Informe a nota do trabalho de laboratório: ");
+        double notaAvaliacaoSemestral = Prompt.lerDecimal("Informe a nota da avaliação semestral: ");
+        double notaExameFinal = Prompt.lerDecimal("Informe a nota do exame final: ");
 
-        double media = (notaLaboratorio * 2 + notaSemestral * 3 + notaExameFinal * 5) / 10;
+        MediaPonderada mediaPonderada = new MediaPonderada(notaLaboratorio, notaAvaliacaoSemestral, notaExameFinal);
+        double mediaFinal = mediaPonderada.calcularMediaFinal();
 
-        Prompt.linhaEmBranco();
-        Prompt.imprimir("Media final: " + media);
+        Prompt.imprimir("A média final do estudante é: " + mediaFinal);
     }
 }
