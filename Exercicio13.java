@@ -1,29 +1,34 @@
 public class Exercicio13 {
     public static void executar(){
         int totalAptos = 0;
-        int totalInaptos = 0;
+        int totalHomens = 0;
+        int totalMulheres = 0;
 
-        int n = Prompt.lerInteiro("Digite a quantidade de pessoas: ");
+        int n = Prompt.lerInteiro("Informe a quantidade de pessoas: ");
 
         for (int i = 0; i < n; i++) {
-            String nome = Prompt.lerLinha("Digite o nome da pessoa " + (i + 1) + ": ");
-            String sexo = Prompt.lerLinha("Digite o sexo da pessoa (M/F): ");
-            int idade = Prompt.lerInteiro("Digite a idade da pessoa: ");
-            String saude = Prompt.lerLinha("Digite a saúde da pessoa (boa/ruim): ");
+            String nome = Prompt.lerLinha("Informe o nome do soldado " + (i + 1) + ": ");
+            char sexo = Prompt.lerLinha("Informe o sexo (M/F) do soldado " + (i + 1) + ": ").charAt(0);
+            int idade = Prompt.lerInteiro("Informe a idade do soldado " + (i + 1) + ": ");
+            boolean saude = Prompt.lerLinha("Informe a saúde do soldado " + (i + 1) + " (S/N): ").equalsIgnoreCase("S");
 
-            boolean apto = (sexo.equalsIgnoreCase("M") && idade >= 18 && idade <= 25 && saude.equalsIgnoreCase("boa"));
-
-            if (apto) {
-                Prompt.imprimir(nome + " está apto para cumprir o serviço militar obrigatório.");
+            Soldado soldado = new Soldado(nome, sexo, idade, saude);
+            if (soldado.estaAptoServicoMilitar()) {
+                Prompt.imprimir("Apto para o serviço militar: Sim");
                 totalAptos++;
             } else {
-                Prompt.imprimir(nome + " não está apto para cumprir o serviço militar obrigatório.");
-                totalInaptos++;
+                Prompt.imprimir("Apto para o serviço militar: Não");
+            }
+
+            if (soldado.getSexo() == 'M') {
+                totalHomens++;
+            } else {
+                totalMulheres++;
             }
         }
 
-        Prompt.linhaEmBranco();
-        Prompt.imprimir("Total de pessoas aptas: " + totalAptos);
-        Prompt.imprimir("Total de pessoas inaptas: " + totalInaptos);
+        Prompt.imprimir("Total de soldados aptos para o serviço militar: " + totalAptos);
+        Prompt.imprimir("Total de homens: " + totalHomens);
+        Prompt.imprimir("Total de mulheres: " + totalMulheres);
     }
 }
