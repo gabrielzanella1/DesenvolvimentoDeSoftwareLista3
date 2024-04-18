@@ -1,3 +1,7 @@
+package br.edu.up.modelos;
+
+import br.edu.up.Prompt;
+
 public class Intervalo {
     public static int lerNumerosNoIntervalo() {
         int quantidadeNumerosNoIntervalo = 0;
@@ -10,4 +14,3 @@ public class Intervalo {
         return quantidadeNumerosNoIntervalo;
     }
 }
-
