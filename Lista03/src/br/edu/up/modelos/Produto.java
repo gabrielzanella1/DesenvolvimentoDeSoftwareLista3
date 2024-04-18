@@ -1,3 +1,5 @@
+package br.edu.up.modelos;
+
 public class Produto {
     private double precoCusto;
 
