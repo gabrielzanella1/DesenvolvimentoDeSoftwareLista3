@@ -22,5 +22,8 @@ public class Programa {
         Exercicio06 exercicio06 = new Exercicio06();
         exercicio06.Executar();
 
+        Exercicio07 exercicio07 = new Exercicio07();
+        exercicio07.Executar();
+
     }
 }
