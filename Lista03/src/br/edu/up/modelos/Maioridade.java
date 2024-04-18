@@ -1,3 +1,5 @@
+package br.edu.up.modelos;
+
 public class Maioridade {
     public static String verificarMaioridade(int idade) {
         if (idade >= 18) {
@@ -6,4 +8,4 @@ public class Maioridade {
             return "Menor de idade";
         }
     }
-}
+}   

@@ -1,5 +1,10 @@
+package br.edu.up.exercicios;
+
+import br.edu.up.Prompt;
+import br.edu.up.modelos.Maioridade;
+
 public class Exercicio10 {
-    public static void executar() {
+    public void Executar() {
         int numeroPessoas = Prompt.lerInteiro("Informe o número de pessoas: ");
 
         for (int i = 0; i < numeroPessoas; i++) {
