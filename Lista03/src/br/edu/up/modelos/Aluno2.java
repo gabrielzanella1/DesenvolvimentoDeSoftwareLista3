@@ -1,3 +1,6 @@
+package br.edu.up.modelos;
+
+
 public class Aluno2 {
     private String nome;
     private double nota1;
@@ -15,7 +18,7 @@ public class Aluno2 {
         return (nota1 + nota2 + nota3) / 3;
     }
 
-    public String calcularMencao() {
+    public String calcularResultado() {
         double media = calcularMedia();
         if (media >= 7) {
             return "Aprovado";
