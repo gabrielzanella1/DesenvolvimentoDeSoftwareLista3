@@ -1,5 +1,10 @@
+package br.edu.up.exercicios;
+
+import br.edu.up.Prompt;
+import br.edu.up.modelos.Sexo;
+
 public class Exercicio11 {
-    public static void executar(){
+    public void Executar(){
         int totalHomens = 0;
         int totalMulheres = 0;
 
@@ -21,4 +26,3 @@ public class Exercicio11 {
         Prompt.imprimir("Total de mulheres: " + totalMulheres);
     }
 }
-

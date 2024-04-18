@@ -1,3 +1,5 @@
+package br.edu.up.modelos;
+
 public class Sexo {
     public static String verificarSexo(char sexo) {
         if (sexo == 'M' || sexo == 'm') {
