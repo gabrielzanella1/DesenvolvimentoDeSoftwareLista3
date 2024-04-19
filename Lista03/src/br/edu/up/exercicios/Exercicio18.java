@@ -1,5 +1,9 @@
+package br.edu.up.exercicios;
+
+import br.edu.up.Prompt;
+
 public class Exercicio18 {
-    public static void executar(){
+    public void Executar() {
         String nome = Prompt.lerLinha("Digite o nome do funcionário: ");
         int idade = Prompt.lerInteiro("Digite a idade do funcionário: ");
         String sexo = Prompt.lerLinha("Digite o sexo do funcionário (M/F): ");

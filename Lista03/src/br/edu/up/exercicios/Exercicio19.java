@@ -1,5 +1,10 @@
+package br.edu.up.exercicios;
+
+import br.edu.up.Prompt;
+import br.edu.up.modelos.Triangulo;
+
 public class Exercicio19 {
-    public static void executar(){
+    public void Executar() {
         int lado1 = Prompt.lerInteiro("Informe o comprimento do lado 1: ");
         int lado2 = Prompt.lerInteiro("Informe o comprimento do lado 2: ");
         int lado3 = Prompt.lerInteiro("Informe o comprimento do lado 3: ");

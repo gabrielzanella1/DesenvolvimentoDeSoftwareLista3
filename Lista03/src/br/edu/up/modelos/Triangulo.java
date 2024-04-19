@@ -1,3 +1,5 @@
+package br.edu.up.modelos;
+
 public class Triangulo {
     private int lado1;
     private int lado2;
