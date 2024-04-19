@@ -1,5 +1,10 @@
+package br.edu.up.exercicios;
+
+import br.edu.up.modelos.Reajuste;
+import br.edu.up.Prompt;
+
 public class Exercicio16 {
-    public static void executar(){
+    public void Executar() {
         double totalReajuste = 0;
         double totalNovosSalarios = 0;
         int totalFuncionarios = 584;
@@ -23,4 +28,4 @@ public class Exercicio16 {
         Prompt.imprimir("Total de reajuste dado: R$ " + totalReajuste);
         Prompt.imprimir("Total de salários após reajuste: R$ " + totalNovosSalarios);
     }
-}   
+}

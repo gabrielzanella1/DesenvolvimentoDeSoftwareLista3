@@ -1,3 +1,5 @@
+package br.edu.up.modelos;
+
 public class Reajuste {
     private double salario;
     private double salarioMinimo;
