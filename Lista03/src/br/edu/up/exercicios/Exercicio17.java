@@ -1,5 +1,10 @@
+package br.edu.up.exercicios;
+
+import br.edu.up.modelos.Salario;
+import br.edu.up.Prompt;
+
 public class Exercicio17 {
-    public static void executar(){
+    public void Executar() {
         double totalAumentoFolha = 0;
 
         while (true) {
@@ -24,4 +29,3 @@ public class Exercicio17 {
         Prompt.imprimir("Total de aumento na folha de pagamento: R$ " + totalAumentoFolha);
     }
 }
-

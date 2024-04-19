@@ -1,3 +1,5 @@
+package br.edu.up.modelos;
+
 public class Salario {
     private String nome;
     private double salarioAtual;
