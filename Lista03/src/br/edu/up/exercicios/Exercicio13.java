@@ -1,5 +1,10 @@
+package br.edu.up.exercicios;
+
+import br.edu.up.modelos.Soldado;
+import br.edu.up.Prompt;
+
 public class Exercicio13 {
-    public static void executar(){
+    public void Executar() {
         int totalAptos = 0;
         int totalHomens = 0;
         int totalMulheres = 0;

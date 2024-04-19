@@ -1,3 +1,5 @@
+package br.edu.up.modelos;
+
 public class Soldado {
     private String nome;
     private char sexo;
