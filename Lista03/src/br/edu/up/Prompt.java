@@ -59,6 +59,7 @@ public class Prompt {
 	 * Faz a leitura de texto digitado no prompt de comandos e retorna uma String no
 	 * formato ISO-8859-1 Latin ou UTF-8.
 	 * 
+	 * 
 	 * @return String
 	 */
 	public static String lerLinha() {
