@@ -1,7 +1,17 @@
+package br.edu.up.modelos;
+
 public class CarangoVelho {
     private int ano;
 
     public CarangoVelho(int ano) {
+        this.ano = ano;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
         this.ano = ano;
     }
 

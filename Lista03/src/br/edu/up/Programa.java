@@ -24,7 +24,7 @@ public class Programa {
 
         Exercicio07 exercicio07 = new Exercicio07();
         exercicio07.Executar();
-        
+
         Exercicio08 exercicio08 = new Exercicio08();
         exercicio08.Executar();
 
@@ -36,5 +36,8 @@ public class Programa {
 
         Exercicio11 exercicio11 = new Exercicio11();
         exercicio11.Executar();
+
+        Exercicio12 exercicio12 = new Exercicio12();
+        exercicio12.Executar();
     }
 }

@@ -1,5 +1,10 @@
+package br.edu.up.exercicios;
+
+import br.edu.up.modelos.CarangoVelho;
+import br.edu.up.Prompt;
+
 public class Exercicio12 {
-    public static void executar(){
+    public void Executar() {
         int totalCarrosAte2000 = 0;
         int totalGeral = 0;
 
