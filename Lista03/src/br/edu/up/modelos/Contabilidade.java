@@ -1,3 +1,5 @@
+package br.edu.up.modelos;
+
 public class Contabilidade {
     private double precoCusto;
     private double precoVenda;

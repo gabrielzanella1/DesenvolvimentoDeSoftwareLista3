@@ -1,5 +1,10 @@
+package br.edu.up.exercicios;
+
+import br.edu.up.modelos.Contabilidade;
+import br.edu.up.Prompt;
+
 public class Exercicio14 {
-    public static void executar(){
+    public void Executar() {
         double totalPrecoCusto = 0;
         double totalPrecoVenda = 0;
 

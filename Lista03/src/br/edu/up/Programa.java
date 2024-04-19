@@ -42,5 +42,8 @@ public class Programa {
 
         Exercicio13 exercicio13 = new Exercicio13();
         exercicio13.Executar();
+
+        Exercicio14 exercicio14 = new Exercicio14();
+        exercicio14.Executar();
     }
 }
