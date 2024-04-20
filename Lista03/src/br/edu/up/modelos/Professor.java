@@ -1,3 +1,5 @@
+package br.edu.up.modelos;
+
 public class Professor {
     private int nivel;
     private double valorHoraAula;
