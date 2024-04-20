@@ -1,5 +1,9 @@
+package br.edu.up.exercicios;
+
+import br.edu.up.Prompt;
+
 public class Exercicio26 {
-    public static void executar(){
+    public void Executar() {
         String nome = Prompt.lerLinha("Digite o nome do pretendente: ");
         int idade = Prompt.lerInteiro("Digite a idade do pretendente: ");
         int grupoRisco = Prompt.lerInteiro("Digite o grupo de risco (1 - baixo, 2 - médio, 3 - alto): ");
