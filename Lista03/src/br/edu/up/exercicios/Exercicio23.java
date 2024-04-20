@@ -1,5 +1,10 @@
+package br.edu.up.exercicios;
+
+import br.edu.up.modelos.*;
+import br.edu.up.Prompt;
+
 public class Exercicio23 {
-    public static void executar(){
+    public void Executar() {
         String nome = Prompt.lerLinha("Digite o nome: ");
         String sexo = Prompt.lerLinha("Digite o sexo (M - Masculino, F - Feminino): ");
         double altura = Prompt.lerDecimal("Digite a altura (em metros): ");
@@ -27,9 +32,9 @@ public class Exercicio23 {
             if (altura > 1.50) {
                 pesoIdeal = (62.1 * altura) - 44.7;
             } else if (altura <= 1.50) {
-                if(idade >= 35 ){
+                if (idade >= 35) {
                     pesoIdeal = (62.1 * altura) - 45;
-                }else{
+                } else {
                     pesoIdeal = (62.1 * altura) - 49;
                 }
             }

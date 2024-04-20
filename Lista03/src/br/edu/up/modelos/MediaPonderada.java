@@ -1,3 +1,5 @@
+package br.edu.up.modelos;
+
 public class MediaPonderada {
     private double notaLaboratorio;
     private double notaAvaliacaoSemestral;
