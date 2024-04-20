@@ -1,3 +1,5 @@
+import br.edu.up.exercicios.Exercicio25;
+
 public class Programa {
     public static void main(String[] args) {
         // Exercicio01.executar();

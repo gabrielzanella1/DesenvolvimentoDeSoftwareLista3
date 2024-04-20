@@ -1,3 +1,7 @@
+package br.edu.up.modelos;
+
+import br.edu.up.Prompt;
+
 public class Classificacao {
     private String nomeEstudante;
     private int numeroMatricula;
@@ -5,7 +9,8 @@ public class Classificacao {
     private double notaAvaliacaoSemestral;
     private double notaExameFinal;
 
-    public Classificacao(String nomeEstudante, int numeroMatricula, double notaLaboratorio, double notaAvaliacaoSemestral, double notaExameFinal) {
+    public Classificacao(String nomeEstudante, int numeroMatricula, double notaLaboratorio,
+            double notaAvaliacaoSemestral, double notaExameFinal) {
         this.nomeEstudante = nomeEstudante;
         this.numeroMatricula = numeroMatricula;
         this.notaLaboratorio = notaLaboratorio;
