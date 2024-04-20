@@ -1,3 +1,5 @@
+package br.edu.up.modelos;
+
 public class ConsumoLuz {
     private int tipoCliente;
     private double valorKwHora;
