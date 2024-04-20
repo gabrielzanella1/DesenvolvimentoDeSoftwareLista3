@@ -1,5 +1,10 @@
+package br.edu.up.exercicios;
+
+import br.edu.up.modelos.Nadador;
+import br.edu.up.Prompt;
+
 public class Exercicio21 {
-    public static void executar(){
+    public void Executar() {
         int idade = Prompt.lerInteiro("Informe a idade do nadador: ");
 
         Nadador nadador = new Nadador(idade);
