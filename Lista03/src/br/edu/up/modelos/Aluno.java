@@ -8,4 +8,16 @@ public class Aluno {
         Media = ((nota1 + nota2 + nota3) / 3);
         return Media;
     }
+
+    public String getNome() {
+        return Nome;
+    }
+
+    public void setNome(String nome) {
+        Nome = nome;
+    }
+
+    public double getMedia() {
+        return Media;
+    }
 }
