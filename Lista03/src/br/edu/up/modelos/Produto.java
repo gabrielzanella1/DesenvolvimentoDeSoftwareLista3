@@ -7,7 +7,15 @@ public class Produto {
         this.precoCusto = precoCusto;
     }
 
+    public double getPrecoCusto() {
+        return precoCusto;
+    }
+
+    public void setPrecoCusto(double precoCusto) {
+        this.precoCusto = precoCusto;
+    }
+
     public double calcularPrecoVenda(double percentualAcrescimo) {
-        return precoCusto * (1 + percentualAcrescimo / 100);
+        return getPrecoCusto() * (1 + percentualAcrescimo / 100);
     }
 }
