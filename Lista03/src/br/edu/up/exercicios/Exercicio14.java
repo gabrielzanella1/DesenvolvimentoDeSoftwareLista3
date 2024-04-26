@@ -22,7 +22,7 @@ public class Exercicio14 {
 
         double mediaPrecoCusto = totalPrecoCusto / 40;
         double mediaPrecoVenda = totalPrecoVenda / 40;
-
+        
         Prompt.imprimir("Média de preço de custo: R$ " + mediaPrecoCusto);
         Prompt.imprimir("Média de preço de venda: R$ " + mediaPrecoVenda);
     }

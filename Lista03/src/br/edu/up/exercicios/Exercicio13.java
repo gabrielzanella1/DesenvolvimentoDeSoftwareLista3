@@ -18,6 +18,7 @@ public class Exercicio13 {
             boolean saude = Prompt.lerLinha("Informe a saúde do soldado " + (i + 1) + " (S/N): ").equalsIgnoreCase("S");
 
             Soldado soldado = new Soldado(nome, sexo, idade, saude);
+            
             if (soldado.estaAptoServicoMilitar()) {
                 Prompt.imprimir("Apto para o serviço militar: Sim");
                 totalAptos++;

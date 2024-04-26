@@ -26,4 +26,14 @@ public class Contabilidade {
     public double getPrecoVenda() {
         return precoVenda;
     }
+
+    public void setPrecoCusto(double precoCusto) {
+        this.precoCusto = precoCusto;
+    }
+
+    public void setPrecoVenda(double precoVenda) {
+        this.precoVenda = precoVenda;
+    }
+
+    
 }
